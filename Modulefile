@@ -1,0 +1,10 @@
+name    'gitolite'
+version '1.0.0'
+source 'https://github.com/rfkrocktk/puppet-gitolite'
+author 'Naftuli Tzvi Kay'
+license 'MIT'
+summary 'Puppet Module for Managing Gitolite'
+description 'Installs and configures Gitolite, repositories, and users.'
+project_page 'https://github.com/rfkrocktk/puppet-gitolite'
+
+dependency 'puppetlabs/git'
