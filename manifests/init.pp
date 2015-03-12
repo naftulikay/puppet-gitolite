@@ -35,6 +35,12 @@ class gitolite (
         $user_home     = $gitolite::params::user_home,
         $version       = $gitolite::params::version,
         $always_update = $gitolite::params::always_update,
-    ) {
+    ) inherits gitolite::params {
 
+    class { 'git': } ->
+    class { 'gitolite::install': }
+
+    # ie: if something depends on this module, all of these must be done before
+    # this module is considered "finished" running
+    contain git, gitolite::install
 }
